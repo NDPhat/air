@@ -21,7 +21,8 @@ class LoginScreen extends StatelessWidget {
             child: Container(
               width: size.width * 0.9,
               height: size.height * 0.6,
-              padding: EdgeInsets.only(top: size.height*0.05,bottom: size.height*0.05 ),
+              margin: EdgeInsets.only(bottom: size.height*0.02),
+              padding: EdgeInsets.only(top: size.height*0.02,bottom: size.height*0.02 ),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   color: Colors.white),
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Container(
                     width: size.width * 0.8,
-                    height: size.height * 0.05,
+                    height: size.height * 0.08,
                     alignment: Alignment.centerLeft,
                     child: const Text(
                       "Đăng nhập",
@@ -40,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height*0.03,
+                    height: size.height*0.02,
                   ),
                   InputFieldWidget(
                     width: size.width * 0.8,
@@ -48,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                     hintText: "Địa chỉ Email",
                   ),
                   SizedBox(
-                    height: size.height*0.03,
+                    height: size.height*0.02,
                   ),
                   InputFieldWidget(
                       width: size.width * 0.8,
@@ -56,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                       hintText: "Mật khẩu",
                       iconRight: const Icon(Icons.visibility_off)),
                   SizedBox(
-                    height: size.height*0.02,
+                    height: size.height*0.01,
                   ),
                   SizedBox(
                     height: size.height * 0.08,
@@ -86,8 +87,8 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          width: size.width * 0.3,
-                          alignment: Alignment.centerLeft,
+                          alignment: Alignment.centerRight,
+                          width: size.width * 0.4,
                           child: const Text(
                             "Quên mật khẩu?",
                             style: TextStyle(
@@ -114,12 +115,16 @@ class LoginScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 16),
                         )),
                       )),
+                  SizedBox(
+                    height: size.height*0.02,
+                  ),
                   Container(
                     alignment: Alignment.center,
                     height: size.height * 0.05,
                     width: size.width,
                     child: const Center(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "Ban chưa có tài khoản ?",
